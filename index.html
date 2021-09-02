@@ -16,17 +16,18 @@
 
 	<body>
 		<!-- //user info stuff -->
-		<form>
-			<label id="userName"> Name? <input /> </label>
+		<form id="new-user">
+			<label id="userName" > Name? <input name="name" /> </label>
 			<label id="userClass">
-				Class? warrior <input type="radio" value="warrior" name="class" required value="warrior" /> a guy
-				<input type="radio" value="a guy" name="class" required value="a guy" /> big bird
-				<input type="radio" value="big bird" name="class" required value="big bird"/> wizard
-				<input type="radio" value="wizard" name="class" required value="wizard"/>
+				Class?
+				<input type="radio" value="warrior" name="class" required value="warrior" /> 
+				<input type="radio" value="a guy" name="class" required value="a guy" /> a guy
+				<input type="radio" value="big bird" name="class" required value="big bird"/> big bird
+				<input type="radio" value="wizard" name="class" required value="wizard"/>wizard
 			</label>
 			<button>TINY BUTTON!!</button>
 		</form>
 
-		<script type="module" src="./app.js"></script>
+		<script type="module" src="./home/home.js"></script>
 	</body>
 </html>
