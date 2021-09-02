@@ -10,7 +10,4 @@ export function setUserInfo(newUser) {
     localStorage.setItem('USER', stringyUser);
 }
 
-// build simple JS user out of formdata obj:
-// makeUser + newMakeUser
-
-// shopping cart?
+findById 
