@@ -19,6 +19,7 @@ export function createUser(formData) {
         hp:100,
         gold: 0,
         completed:{} };
+    console.log(formData);
     return newUser;}
 
 
