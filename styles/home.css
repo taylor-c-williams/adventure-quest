@@ -1,1 +1,12 @@
 /* add home page styles here */
+
+form{
+    margin: 50px;
+}
+label{
+    display: block;
+}
+
+input {
+    display: block;
+}
