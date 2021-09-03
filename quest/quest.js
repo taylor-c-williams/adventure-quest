@@ -1,32 +1,37 @@
-// import functions
+// import functions:
 
-// load userdata from storage, add to header data
-// hp, name gold etc
+// loadProfile (); << load user data into header
 
-//URL search params + magic window
-
+//URL search params + magic window:
 // const searchParams = new URLSearchParams(window.location.search);
 
-// get quest id from the url
-// use findbyid to find quest in data 
+// grab quest id from the url >> const questID = searchParams.get('id');
+
+// get quest data w findById (set a var)
 
 // if !quest then go to the map
 
-// populate DOM
-// title.textcontent = quest title
-//+ quest image
-// description.textcontent = quest.description
+// set consts: getElementById for title, img, description, choices + form, results + results description
 
-// for: iterate through objs
-// request choices/quests
-// append choice
+// populate DOM using getElementById consts you just wrote:
 
-//choiceForm event listener -- submit
-//prevent default
-//formData.get
-// findbyID: quest choices
+// title.textcontent = quest.title;
+// img.src = './path/' + quest.image; <<< concatenated strings for URLS
+// etc for each const
 
-//get user from local
+// for/let index = quest.choices.length 
+//const choice = quest.choices[index]
+//const create DOM element = function that creates choice
+//then append each choice (children)(const we just set^^)
 
-//generate a score and manipulate user state
-// save user (set user?)
+//choiceForm event listener -- submit :
+
+// >prevent default
+// >const = new FormData(choiceForm)<<< the name of our choice form
+// >const choice ID  = get the choice ID
+// >const choice = formData.get >> choice
+// >get user
+// >generate a score and manipulate user state >> create scoreQuest function
+// >save user (set user?)
+// >Update UI >> classList.add the hidden stuff
+// > loadProfile(); << reload header data
