@@ -1,43 +1,37 @@
 
-import { isDead, gameOver } from '../common/is-dead.js';
+// import { isDead, gameOver } from '../common/is-dead.js';
 import { loadProfile } from '../common/load-profile.js';
 import { getUserInfo } from '../utils.js';
 import { createQuest } from './create-quest-link.js';
 import { createCompletedQuest } from './create-completed-quest.js';
 import quests from '../data/quest-data.js';
-loadProfile();
-const user = getUserInfo();
-//call header info function? hp/gold/name etc
-const divEl = document.getElementById('quests');
 
+const user = getUserInfo();
+const divEl = document.getElementById('quests-links');
+
+loadProfile();
+createQuest(quests);
 
 
 // if (isDead(user) || gameOver()) {
-    
 //     // window.location = '../results/index.html';
 // }
-createQuest(quests);
-// Not getting quest data from quest data or rendering links on map !!!
-//  isdead/iscompleted function, send to results page
-
-//getting quest elem from DOM - Nav ID for each quest, rendering function
-//to iterate through data and generate
+// >>>> if isdead/iscompleted , send to results page
 
 for (let quest of quests) {
-    // for every quest
+    // for every quest,
     let questDisplay = null;
-    // if the user has completed it
-
-    console.log(quest.id);
+    // if the user has completed it:
     const theUserHasCompletedThisQuest = user.completed[quest.id];
 
     if (theUserHasCompletedThisQuest) {
-        // make a completed quest display (with a checkmark)
+        // make a completed quest display (with a check-mark)
         questDisplay = createCompletedQuest(quest);
     }
     else {
         // otherwiese, make a link to the quest
         questDisplay = createQuest(quest);
     }
-    divEl.appendChild(questDisplay); // add the quest display to the nav
+    divEl.appendChild(questDisplay); 
+    // add the quest display to the nav
 }
