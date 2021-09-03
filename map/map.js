@@ -1,13 +1,21 @@
 // import (lots)
-import { loadProfile } from '../common/load-profile.js';
-
-loadProfile();
-
-//call header info function? hp/gold/name etc
+// import { isDead } from '../common/is-dead.js';
+// import { loadProfile } from '../common/load-profile.js';
+// import { getUserInfo } from '../utils.js';
+// import { createQuest } from './create-quest-link.js';
+// import quests from '../data/quest-data.js';
+// loadProfile();
+// // const user = getUserInfo();
+// //call header info function? hp/gold/name etc
 
 // get user from local
-
-// isdead/iscompleted function, send to results page
+// if(isDead(user) || gameOver(quests, user)) {
+//     window.location = '../results/index.html';
+// }
+// const questLanding = document.getElementById('quests');
+// createQuest(quests);
+// Not getting quest data from quest data or rendering links on map !!!
+//  isdead/iscompleted function, send to results page
 
 //getting quest elem from DOM - Nav ID for each quest, rendering function
 //to iterate through data and generate
