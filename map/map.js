@@ -1,4 +1,7 @@
 // import (lots)
+import { loadProfile } from '../common/load-profile.js';
+
+loadProfile();
 
 //call header info function? hp/gold/name etc
 
