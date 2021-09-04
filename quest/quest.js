@@ -3,7 +3,7 @@
 import quests from '../data/quest-data.js';
 import { findById } from '../utils.js';
 import { createChoice } from './create-choice.js';
-// loadProfile (); << load user data into header
+ 
 
 
 //URL search params + magic window:
@@ -16,38 +16,31 @@ const questID = searchParams.get('id');
 const questData = findById(quests, questID);
 
 // if !quest then go to the map
-if (!quests){
+if (!questData){
     window.location = '../map'; 
 }
 
 // set consts: getElementById for title, img, description, choices + form, results + results description
 const questTitle = document.getElementById('quest-title');
-const image = document.getElementById('quest-img');
-const description = document.getElementById('quest-description');
+const imageEl = document.getElementById('quest-img');
+const descriptionEl = document.getElementById('quest-description');
 // const choiceForm = document.getElementById('choice-form');
 const choicesZone = document.getElementById('choices-zone');
 // const resultsDescription = document.getElementById('results-description');
 
-// const questId = searchParams.get('id');
+
 
 
 // populate DOM using getElementById consts you just wrote:
-questTitle.textContent = quests.title;
-image.src = '../assets/quests/' + quests.image; 
-description.textContent = quests.description;
-
-// for/let index = quest.choices.length 
-// for (let booger of quests){
-//     const userOptions = quests.choices;
-
-// for (let index = 0; index < quests.choices.length; index++) {
-//     const choice = quests.choices[index];
-//     const makeChoice = createChoice(choice);
-//     choicesZone.appendChild(makeChoice);    
-// }
-
+questTitle.textContent = questData.title;
+// imageEl.src = ; 
+descriptionEl.textContent = questData.description;
+imageEl.src = '../assets/quests/' + questData.image;
+console.log(imageEl);
+// `../assets/quests/${questData.image}`
+// loadProfile();
 for (let index = 0; index < questData.choices.length; index++) {
-    const choice = quests.choices[index];
+    const choice = questData.choices[index];
     // go make a choice dom element
     const choiceDOM = createChoice(choice);
     // and append that choice

@@ -6,6 +6,7 @@ export function createChoice(choice){
     radio.type = 'radio';
     radio.value = choice.id;
     radio.required = true;
+    radio.name = 'selection';
 
     label.appendChild(radio);
 
