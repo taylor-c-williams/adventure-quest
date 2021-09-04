@@ -33,10 +33,11 @@ const choicesZone = document.getElementById('choices-zone');
 
 // populate DOM using getElementById consts you just wrote:
 questTitle.textContent = questData.title;
-imageEl.src = `../assets/quests/${questData.image}`; 
+// imageEl.src = ; 
 descriptionEl.textContent = questData.description;
-
-
+imageEl.src = '../assets/quests/' + questData.image;
+console.log(imageEl);
+// `../assets/quests/${questData.image}`
 // loadProfile();
 for (let index = 0; index < questData.choices.length; index++) {
     const choice = questData.choices[index];
