@@ -1,21 +1,22 @@
-// import save user + make user
-import { createUser, setUserInfo } from './create-User.js';
-// grab form from homepage
-const formEl = document.getElementById('new-user');
-//submit event listener
-formEl.addEventListener('submit', function(event) {
-    event.preventDefault();
-    //prevent default
-    const formData = new FormData(formEl);
-    const user = createUser(formData);
-    setUserInfo(user);
-    window.location = 'map';
-});
+// Moved to app.js
 
-// new form data obj
+// import { createUser, setUserInfo } from './create-User.js';
+// // grab form from homepage
+// const formEl = document.getElementById('new-user');
+// //submit event listener
+// formEl.addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     //prevent default
+//     const formData = new FormData(formEl);
+//     const user = createUser(formData);
+//     setUserInfo(user);
+//     window.location = 'map';
+// });
 
-//local storage --- user
+// // new form data obj
 
-//redirect to map
+// //local storage --- user
 
-/// ---> getting form data, creating user data
+// //redirect to map
+
+// /// ---> getting form data, creating user data.

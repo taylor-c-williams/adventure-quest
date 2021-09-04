@@ -1,8 +1,21 @@
-// import functions and grab DOM elements
+// import save user + make user
+import { createUser, setUserInfo } from './home/create-User.js';
+// grab form from homepage
+const formEl = document.getElementById('new-user');
+//submit event listener
+formEl.addEventListener('submit', function(event) {
+    event.preventDefault();
+    //prevent default
+    const formData = new FormData(formEl);
+    const user = createUser(formData);
+    setUserInfo(user);
+    window.location = './map/index.html';
+});
 
-// initialize global state
+// new form data obj
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+//local storage --- user
+
+//redirect to map
+
+/// ---> getting form data, creating user data
