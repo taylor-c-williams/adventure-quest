@@ -21,7 +21,7 @@ if (!questData){
 
 // set consts: getElementById for title, img, description, choices + form, results + results description
 const questTitle = document.getElementById('quest-title');
-const imageEl = document.getElementById('quest-img');
+
 const descriptionEl = document.getElementById('quest-description');
 // const choiceForm = document.getElementById('choice-form');
 const choicesZone = document.getElementById('choices-zone');
@@ -31,8 +31,7 @@ const choicesZone = document.getElementById('choices-zone');
 // populate DOM using getElementById consts you just wrote:
 questTitle.textContent = questData.title;
 descriptionEl.textContent = questData.description;
-imageEl.src = '../assets/quests/' + questData.image;
-// `../assets/quests/${questData.image}`
+
 // loadProfile();
 for (let index = 0; index < questData.choices.length; index++) {
     const choice = questData.choices[index];
