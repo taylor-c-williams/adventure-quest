@@ -47,56 +47,42 @@ const monsters = {
 
 const dragon = {
     id: 'dragon',
-    title: 'A HAIRY!!! Dragon',
+    title: 'Out on a Plumbing call',
     map: {
         top: '17%',
         left: '37%'
     },
-    image: 'dragon.jpg',
-    audio: 'dragon.wav',
+    image: 'superMB.jpg',
     action: 'dragon-growl.aiff',
     description: `
-        You run to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+       You are on your way to a late night emergency call and as you arrive to the address you notice your brother has just arrived as well
+       The plumbing issue looks much worse than you expected and as you are investigating this strange humuan-sized pipe you see a weird red and white mushroom.
+       What do you do next?
     `,
     choices: [{
-        id: 'run',
-        description: 'Get the hell out of the village',
+        id: 'eat',
+        description: 'You Eat the Mushroom',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            You suddenly grow twice your normal size and start hallucinating about peaches. But you do such a great job that the customer gives you a bonus for your work
         `,
-        hp: -35,
+        hp: 25,
+        gold: 50
+    }, {
+        id: 'walk',
+        description: 'You abandon the call--too weird',
+        result: `
+            You find yourself back at home getting a goods night rest but you miss out on the invoice and lose money in future calls do to your wonton abandonement of customers in need
+        `,
+        hp: 50,
+        gold: -25
+    }, {
+        id: 'switch',
+        description: 'You switch places with your brother',
+        result: `
+            While Luigi isn't quite as good as you, He still gets the job done. Due to your business agreement he will receive 70% of the funds from the call since he did the work and you simply assisted. You still spend the hours awake and working though.
+        `,
+        hp: -15,
         gold: 15
-    }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
-        `,
-        hp: -45,
-        gold: 0
-    }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
-        result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
-        `,
-        hp: 0,
-        gold: 90
     }]
 };
 
