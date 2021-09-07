@@ -2,7 +2,7 @@
 import quests from '../data/quest-data.js';
 import { findById, getUserInfo, setUserInfo } from '../utils.js';
 import { createChoice } from './create-choice.js';
-// import { scoreQuest } from './score-quest.js';
+
  
 const searchParams = new URLSearchParams(window.location.search);
 
@@ -14,7 +14,7 @@ const questData = findById(quests, questID);
 
 // if !quest then go to the map
 if (!questData){
-    // window.location = '../map'; 
+    window.location = '../map'; 
 }
 
 const questTitle = document.getElementById('quest-title');
@@ -23,6 +23,8 @@ const descriptionEl = document.getElementById('quest-description');
 
 const choiceForm = document.getElementById('choice-form');
 const resultsEl = document.getElementById('results-description');
+const questImg = document.getElementById('quest-img');
+questImg.src = '../assets/quests/' + questData.image;
 
 
 
@@ -55,7 +57,5 @@ choiceForm.addEventListener('submit', (event) => {
     setUserInfo(user);
     choiceForm.style.display = 'none';
     resultsEl.textContent = resultChoice; 
-    // scoreQuest(questAnswer);
-    
-    
+   
 });
