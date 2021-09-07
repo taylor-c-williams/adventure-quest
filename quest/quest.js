@@ -35,9 +35,12 @@ for (let index = 0; index < questData.choices.length; index++) {
     // and append that choice
     choiceForm.appendChild(choiceDOM);
 }
-
+console.log(quests.choices.id);
 choiceForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const answerData = document.querySelector('input:checked');
-    answerData.value;
+    const questAnswer = answerData.value;
+    // scoreQuest(questAnswer);
+    
+    
 });
