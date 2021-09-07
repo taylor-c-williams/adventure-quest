@@ -13,9 +13,9 @@ const goldHeader = document.getElementById('goldHeader');
 export function loadProfile(){
     const user = getUserInfo();
     icon.src = `../assets/avatars/${user.class}.png`;
-    userHeaderName.textContent = user.name;
-    hpHeader.textContent = user.hp;
-    goldHeader.textContent = user.gold;
+    userHeaderName.textContent = ` ${user.name} `;
+    hpHeader.textContent = ` ${user.hp} `;
+    goldHeader.textContent = ` ${user.gold} `;
 
     if (!user){
         window.location = '../index.html'; 

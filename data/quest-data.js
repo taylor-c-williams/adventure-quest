@@ -10,16 +10,16 @@ const monsters = {
     },
     image: 'monsters.jpg',
     description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
+        You enter the internview lobby only to be confronted by a hoard of
+        coders. And they look hungry. What do you do?
     `,
     choices: [{
         id: 'negotiate',
         description: 'Negotiate with them',
         result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
+            Knowing the coders are not too bright, (they didn't go to Alchemy code lab after all....),
+            you distract them and offer to buy thai food from the village pub. They give you 35 gold for meals
+            that will never be delivered.  You get the job.  They don't. 
         `,
         hp: 0,
         gold: 35
@@ -27,19 +27,18 @@ const monsters = {
         id: 'fight',
         description: 'Fiiiiiggghhhttt!',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
+            Brandishing your laptop you let out a warrior's cry and charge into the lobby,
             hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
+            your vanquished foes. The bad news is you take 30 hp damage. The good news is you get the job.  50 gold.
         `,
         hp: -30,
         gold: 50
     }, {
         id: 'run',
-        description: 'Run away like good Sir Robin',
+        description: 'Run away.',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            As you make a dash for the door the hiring manager spots you running away and they call you names.  Bad names.  Hurtful names.
+            causing 50 hp damage.  You don't get the job.
         `,
         hp: -50,
         gold: 0

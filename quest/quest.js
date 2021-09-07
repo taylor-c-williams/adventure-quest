@@ -19,6 +19,7 @@ if (!questData){
     window.location = '../map'; 
 }
 
+
 // set consts: getElementById for title, img, description, choices + form, results + results description
 const questTitle = document.getElementById('quest-title');
 const imageEl = document.getElementById('quest-img');
@@ -46,7 +47,10 @@ for (let index = 0; index < questData.choices.length; index++) {
 //then append each choice (children)(const we just set^^)
 
 //choiceForm event listener -- submit :
-
+const submitEl = document.getElementById('quest-choice');
+submitEl.addEventListener('submit'. function(event) {
+    event.preventDefault();
+})
 // >prevent default
 // >const = new FormData(choiceForm)<<< the name of our choice form
 // >const choice ID  = get the choice ID
