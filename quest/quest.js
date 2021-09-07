@@ -1,7 +1,8 @@
 
 import quests from '../data/quest-data.js';
-import { findById } from '../utils.js';
+import { findById, getUserInfo, setUserInfo } from '../utils.js';
 import { createChoice } from './create-choice.js';
+// import { scoreQuest } from './score-quest.js';
  
 const searchParams = new URLSearchParams(window.location.search);
 
@@ -21,6 +22,7 @@ const questTitle = document.getElementById('quest-title');
 const descriptionEl = document.getElementById('quest-description');
 
 const choiceForm = document.getElementById('choice-form');
+const resultsEl = document.getElementById('results-description');
 
 
 
@@ -35,11 +37,24 @@ for (let index = 0; index < questData.choices.length; index++) {
     // and append that choice
     choiceForm.appendChild(choiceDOM);
 }
-console.log(quests.choices.id);
+
 choiceForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const answerData = document.querySelector('input:checked');
     const questAnswer = answerData.value;
+    
+    const choice = findById(questData.choices, questAnswer);
+
+    const user = getUserInfo();
+
+    user.gold += choice.gold;
+    user.hp += choice.hp;
+    user.completed[questData.id] = true;
+
+    let resultChoice = choice.result;
+    setUserInfo(user);
+    choiceForm.style.display = 'none';
+    resultsEl.textContent = resultChoice; 
     // scoreQuest(questAnswer);
     
     
