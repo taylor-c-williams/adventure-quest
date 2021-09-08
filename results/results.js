@@ -14,3 +14,5 @@ const wealthMessage = userHealth === 'dead'
     : aliveGoldMessages[userWealth];
 
 resultsMsg.textContent = `Hello ${user.name} the ${user.class}! ${hpMessage} and ${wealthMessage}`;
+resultImg.src = '../assets/results/GameOver.jfif';
+

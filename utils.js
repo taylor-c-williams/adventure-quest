@@ -31,3 +31,10 @@ export function questsComplete(user) {
     }
     return true;
 }
+export function createUser(formData) {
+    const newUser = { name:formData.get('name'), 
+        class:formData.get('class'), 
+        hp:100,
+        gold: 0,
+        completed:{} };
+    return newUser;}

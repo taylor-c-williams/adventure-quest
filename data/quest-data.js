@@ -108,7 +108,7 @@ const treasure = {
         id: 'wooden',
         description: 'A Wooden Chest',
         result: 'You grab 40 gold pieces!',
-        hp: 0,
+        hp: -100,
         gold: 40
     }, {
         id: 'golden',
