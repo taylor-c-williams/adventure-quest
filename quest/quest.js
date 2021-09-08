@@ -1,4 +1,5 @@
 
+import { isDead } from '../common/is-dead.js';
 import quests from '../data/quest-data.js';
 import { findById, getUserInfo, questsComplete, setUserInfo } from '../utils.js';
 import { createChoice } from './create-choice.js';
@@ -54,10 +55,10 @@ choiceForm.addEventListener('submit', (event) => {
     user.completed[questData.id] = true;
     
     
-    if (questsComplete(user)){
+    if (questsComplete(user) || isDead(user)){
         setTimeout(() => window.location = '../results/index.html', 5005);
     } else {
-        setTimeout(() => window.location = '../map/index.html', 5005);
+        setTimeout(() => window.location = '../map/index.html', 3005);
     }
 
     let resultChoice = choice.result;

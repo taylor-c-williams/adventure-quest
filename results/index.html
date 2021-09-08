@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,26 +8,29 @@
 			href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="quest.css" />
+		<link rel="stylesheet" href="./results.css" />
 
 		<title>Results</title>
 	</head>
 	<body><div id="user-header"></div>
-<header id ="quest-title"></header>
+<header id ="game-results">Results
+    <div id="userHeader" class="user-header">
+        <img id="icon" src="" alt="">
+        <span id="userHeaderName"></span>
+        <span id="hpHeader"></span>
+        <span id="goldHeader"></span>
+    </div>
+</header>
+
+<img id="img-result" src=/>
+<span id='result-message'></span>
 
 
 
-
-
-
-<!-- section id = results-description, class = "hidden" in css? >>> hidden until submit click -->
-<section id="results-description" class="hidden">
-<!--  inject results data based on user choice -- -->
-</section>
 
 
 <!-- link back to map/choose next quest -->
-<a id='cont-link' href="../map">Choose Next Quest!</a>
+<a id='cont-link' href="../index.html">Play Again</a>
 
             
 		<script type="module" src="./results.js"></script>

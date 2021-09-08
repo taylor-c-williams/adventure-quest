@@ -1,15 +1,16 @@
-// import a bunch of stuff
+import { loadProfile } from '../common/load-profile.js';
+import { getUserInfo } from '../utils.js';
+import { getUserHealth, getUserWealth, aliveGoldMessages, deadGoldMessages, hpMessages } from './utils.js';
+loadProfile();
+const resultsMsg = document.getElementById('result-message');
+const resultImg = document.getElementById('img-result');
 
-// call loadprofile
-// user =getuser()
+let user = getUserInfo();
+const userHealth = getUserHealth(user);
+const userWealth = getUserWealth(user);
+const hpMessage = hpMessages[userHealth];
+const wealthMessage = userHealth === 'dead' 
+    ? deadGoldMessages[userWealth] 
+    : aliveGoldMessages[userWealth];
 
-//get element: story display
-
-//hp result, gold result (scoreHP)(goldHP)
-// result messages
-
-// if else dead gold, alive gold
-// after adventure story message
-// user.name. user.race hpmessage goldmessage
-
-// story display textContent = story
+resultsMsg.textContent = `Hello ${user.name} the ${user.class}! ${hpMessage} and ${wealthMessage}`;
