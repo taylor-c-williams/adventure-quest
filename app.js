@@ -1,5 +1,5 @@
 // import save user + make user
-import { createUser, setUserInfo } from './home/create-User.js';
+import { createUser, setUserInfo } from './utils.js';
 // grab form from homepage
 const formEl = document.getElementById('new-user');
 //submit event listener

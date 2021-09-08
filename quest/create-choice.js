@@ -1,6 +1,7 @@
 // build create choice function, render 3 radio inputs
 export function createChoice(choice){
-    const label = document.getElementById('create-choice');
+    
+    const label = document.createElement('label');
     label.classList.add('new-choice');
     const radio = document.createElement('input');
     radio.type = 'radio';
@@ -17,7 +18,3 @@ export function createChoice(choice){
     return label;
 }
 
-//render a label/classlist add choice
-//appendchild -- description
-//return label
-//export default

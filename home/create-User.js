@@ -9,7 +9,10 @@ export function setUserInfo(newUser) {
     const stringyUser = JSON.stringify(newUser);
     localStorage.setItem('USER', stringyUser);
 }
-
+export function setUserChange(hp, gold, completed) {
+    const stringyUser = JSON.stringify(hp, gold, completed);
+    localStorage.setItem('USER', stringyUser);
+}
 // build simple JS user out of formdata obj:
 // makeUser + newMakeUser
 

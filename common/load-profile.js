@@ -1,6 +1,6 @@
 // header/user score thingy
 
-import { getUserInfo } from '../home/create-User.js';
+import { getUserInfo } from '../utils.js';
 import { isDead } from './is-dead.js';
  
 // get elements by id

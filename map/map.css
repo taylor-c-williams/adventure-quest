@@ -39,3 +39,6 @@ main {
 .quests-links a:link {
     margin:5px;
 }
+#icon {
+    width: 25px;
+}
