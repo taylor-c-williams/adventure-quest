@@ -1,3 +1,4 @@
+import quests from './data/quest-data.js';
 export function getUserInfo() {
     const stringyUser = localStorage.getItem('USER');
     if (!stringyUser) return [];  
@@ -19,4 +20,14 @@ export function findById(quests, id) {
             return item;
         }
     }
+}
+
+export function questsComplete(user) {
+    for (let quest of quests) {
+        const isTrue = user.completed[quest.id];
+        if (!isTrue) {
+            return false;
+        }
+    }
+    return true;
 }

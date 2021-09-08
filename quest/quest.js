@@ -1,6 +1,6 @@
 
 import quests from '../data/quest-data.js';
-import { findById, getUserInfo, setUserInfo } from '../utils.js';
+import { findById, getUserInfo, questsComplete, setUserInfo } from '../utils.js';
 import { createChoice } from './create-choice.js';
 
  
@@ -52,6 +52,13 @@ choiceForm.addEventListener('submit', (event) => {
     user.gold += choice.gold;
     user.hp += choice.hp;
     user.completed[questData.id] = true;
+    
+    
+    if (questsComplete(user)){
+        setTimeout(() => window.location = '../results/index.html', 5005);
+    } else {
+        setTimeout(() => window.location = '../map/index.html', 5005);
+    }
 
     let resultChoice = choice.result;
     setUserInfo(user);
