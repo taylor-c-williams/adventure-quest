@@ -4,28 +4,35 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./styles/reset.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">		
 		<link rel="stylesheet" href="./styles/style.css" />
-		<link rel="stylesheet" href="./styles/home.css" />
 		<title>Adventure Quest</title>
 	</head>
+
+
 	<body>
-		<!-- //user info stuff -->
+		<main>
 		<form id="new-user">
 			<label id="userName" > Name? <input name="name" /> </label>
-			<label id="userClass">
-				Class?
-				<input type="radio" value="cleric" name="class" required value="cleric" />Cleric
-				<input type="radio" value="elf" name="class" required value="elf" /> a guy
-				<input type="radio" value="Plumber" name="class" required value="Plumber"/> Plumber
-				<input type="radio" value="wizard" name="class" required value="wizard"/>wizard
+			Class?
+			<label id="userClass" class="class">
+				Cleric
+				<input type="radio" value="cleric" name="class" required value="cleric" />
+
+				a guy
+				<input type="radio" value="elf" name="class" required value="elf" />
+
+				Plumber
+				<input type="radio" value="Plumber" name="class" required value="Plumber"/> 
+
+				wizard
+				<input type="radio" value="wizard" name="class" required value="wizard"/>
 			</label>
 			<button>TINY BUTTON!!</button>
 		</form>
+		</main>
 		<script type="module" src="./app.js"></script>
 	</body>
 </html>
