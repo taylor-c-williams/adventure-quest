@@ -8,24 +8,25 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">		
 		<link rel="stylesheet" href="./quest.css" />
-		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="../styles/style.css" />
 
 		<title>Quest Index</title>
 	</head>
 	<body><div id="user-header"></div>
-<header id ="quest-title"></header>
+<header class='header-class'><div id ="quest-title"></div></header>
 
 
 <!-- inject quest.img-->
 
-<img id="quest-img" src=/>
+<div class="img-cnt"><img id="quest-img" class="quest-pic" src=/></div>
 
-
+<main class="main-main">
+	<div></div>
 <!-- inject quests.description -->
-<span id = "quest-description">Quest text</span>
+<section class="description-cnt"><span class='qst-dscpt' id = "quest-description">Quest text</span>
 
 <!-- form id = "choice-form" -->
-<form id = "choice-form">
+<form class='quest-choices' id = "choice-form">
 	<label id ="create-choice"></label>
 <p id ="choices-zone"></p>
 <!-- <p id="choices"> </p> -->
@@ -38,7 +39,9 @@
 <section id="results-description" class="hidden">
 <!--  inject results data based on user choice -- -->
 </section>
-        
+</section> 
+<div></div>
+</main>      
 		<script type="module" src="./quest.js"></script>
 	</body>
 </html>
