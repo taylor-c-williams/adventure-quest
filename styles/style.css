@@ -8,7 +8,43 @@ body, html {
     margin:0;
     padding:0;
 }
-
+.header-class {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    height: 95px;
+    background-color: wheat;
+    text-align: center;
+    align-items: center;
+    
+}
+.img-cnt {
+    display: flex;
+    justify-content: center;
+}
+.quest-pic {
+    display: flex;
+    width: 50%;
+    height: auto;
+    border: solid 2px black;
+    margin: 2px;
+}
+.description-cnt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100% ;
+    margin: 0;
+}
+.qst-dscpt {
+    border: solid 2px black;
+}
+section > form {
+    display: flex;
+    align-items:center;
+}
 main {
     font-family: 'Amatic SC', cursive;
     font-size:2em;
@@ -16,18 +52,31 @@ main {
     justify-content: center;
     align-items: center;
 }
-
+.main-main {
+    display: grid;
+    grid-template-columns: 18% 1fr 18%;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
 form{
     padding:20px;
 
 }
-
+.quest-choices {
+    display: flex;
+    flex-direction: column;
+    border: solid 3px black;
+    margin-top: 3px;
+    font-size: 1rem;
+}
 label{
     display: flex;
     flex-direction: column;
     padding:10px;
 }
-
+#results-description {
+    border: solid 2px black;
+}
 #userClass{
     padding:20px;
     margin-bottom:5px;

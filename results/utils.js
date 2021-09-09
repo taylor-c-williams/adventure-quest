@@ -1,7 +1,7 @@
 export const aliveGoldMessages = {
     poor: 'you live as a poor beggar',
     modest: 'you live in a modest hut farming the earth',
-    rich: 'you and your whole family live in small castle in luxury',
+    rich: 'you and your whole family live in a small castle in luxury',
 };
 
 export const deadGoldMessages = {
